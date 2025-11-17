@@ -63,3 +63,12 @@ print('Name: {}'.format(cpu_data['name']))
 print('Weight: {}'.format(cpu_weight_formatted) + "(kgs)")
 print('Height: {}'.format(cpu_height_formatted) + "(m)")
 print('Ability: {}'.format(cpu_ability['name']))
+
+def get_stats(pokemon_data):
+    stats = pokemon_data["stats"]
+
+    hp = stats[0]["base_stat"]
+    attack = stats[1]["base_stat"]
+    defense = stats[2]["base_stat"]
+
+    return hp, attack, defense
